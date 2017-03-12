@@ -15,7 +15,8 @@ namespace PersonService
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
-                .UseApplicationInsights()
+                //.UseApplicationInsights()
+                .UseIISIntegration()
                 .Build();
 
             host.Run();
